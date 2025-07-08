@@ -1,8 +1,7 @@
-```python
 """
 CONCRETE OVERFLOW DETECTOR v0.1 (Proof of Concept)
 Detecting concrete processing patterns in AI abstract reasoning
-Based on H. Danan (2021) - Neural representation of abstract concepts in typical and atypical cognition
+Based on H. Levinson (2021) - Neural representation of abstract concepts in typical and atypical cognition
 
 This experimental tool identifies when AI systems process abstract concepts through 
 concrete/perceptual pathways - the same pattern found in ASD neural processing.
@@ -21,11 +20,11 @@ from collections import Counter
 
 @dataclass
 class NeuralSignature:
-    """Neural activation patterns from Danan (2021)"""
+    """Neural activation patterns from Levinson (2021)"""
     region: str
     activation_pattern: np.ndarray
     processing_type: str  # 'abstract' or 'concrete'
-    source: str = "Illustrative values based on Danan (2021) findings"
+    source: str = "Illustrative values based on Levinson (2021) findings"
     
 class ConcreteOverflowDetector:
     """
@@ -54,13 +53,13 @@ class ConcreteOverflowDetector:
                 region='dorsomedial prefrontal cortex',
                 activation_pattern=np.array([0.8, 0.9, 0.7, 0.85]),  # NT abstract pattern
                 processing_type='abstract',
-                source="Illustrative based on Danan (2021) dmPFC findings"
+                source="Illustrative based on Levinson (2021) dmPFC findings"
             ),
             'thalamus': NeuralSignature(
                 region='thalamus', 
                 activation_pattern=np.array([0.3, 0.2, 0.9, 0.85]),  # ASD concrete pattern
                 processing_type='concrete',
-                source="Illustrative based on Danan (2021) thalamic activation in ASD"
+                source="Illustrative based on Levinson (2021) thalamic activation in ASD"
             ),
             'right_vATL': NeuralSignature(
                 region='right ventral anterior temporal lobe',
@@ -72,12 +71,12 @@ class ConcreteOverflowDetector:
                 region='right superior temporal gyrus',
                 activation_pattern=np.array([0.9, 0.8, 0.3, 0.2]),  # NT social pattern
                 processing_type='abstract',
-                source="Based on social processing differences in Danan (2021)"
+                source="Based on social processing differences in Levinson (2021)"
             )
         }
     
     def _initialize_semantic_features(self) -> Dict[str, List[str]]:
-        """14-feature semantic model from Danan (2021) dissertation"""
+        """14-feature semantic model from Levinson (2021) dissertation"""
         return {
             'internal': ['social', 'emotion', 'polarity', 'morality', 'thought', 'self-motion'],
             'external': ['space', 'time', 'quantity'],
@@ -99,7 +98,7 @@ class ConcreteOverflowDetector:
             'version': 'v0.1 Experimental',
             'tested_on': 'Simulated AI responses (pending real data)',
             'human_correlation': 'Pending validation study',
-            'fmri_validation': 'Based on Danan (2021) - 60+ brain scans',
+            'fmri_validation': 'Based on Levinson (2021) - 60+ brain scans',
             'status': 'Proof of Concept - Not for clinical use'
         }
     
@@ -393,7 +392,7 @@ class ConcreteOverflowDetector:
             "METAPHOR_LITERALIZATION": 
                 f"Detecting figurative language processed through concrete pathways. "
                 f"Overflow score: {overflow_score:.2%}. This pattern resembles literal "
-                f"interpretation of abstract concepts found in ASD neural patterns (Danan, 2021). "
+                f"interpretation of abstract concepts found in ASD neural patterns (Levinson, 2021). "
                 f"Note: v0.1 experimental detection.",
             
             "STATISTICAL_MIMICRY": 
@@ -404,7 +403,7 @@ class ConcreteOverflowDetector:
             "CONCRETE_NETWORK_OVERFLOW":
                 f"Detecting potential vATL overextension pattern (overflow: {overflow_score:.2%}). "
                 f"Suggests concrete semantic networks processing abstract content, "
-                f"similar to patterns observed in Danan (2021) dissertation.",
+                f"similar to patterns observed in Levinson (2021) dissertation.",
             
             "MECHANICAL_SOCIAL_PROCESSING":
                 f"Social/emotional concepts appear to be processed mechanically "
@@ -503,7 +502,7 @@ class ConcreteOverflowDetector:
             'current_status': 'v0.1 Experimental',
             'validation_steps': {
                 'completed': [
-                    'Theoretical framework based on Danan (2021)',
+                    'Theoretical framework based on Levinson (2021)',
                     'Initial pattern detection algorithms',
                     'Proof of concept implementation'
                 ],
@@ -520,7 +519,7 @@ class ConcreteOverflowDetector:
                 ]
             },
             'data_sources': {
-                'neural_patterns': 'Based on 80+ fMRI scans from Danan (2021)',
+                'neural_patterns': 'Based on 60+ fMRI scans from Levinson (2021)',
                 'behavioral_validation': 'Pending',
                 'ai_response_testing': 'Pending'
             }
@@ -572,4 +571,3 @@ if __name__ == "__main__":
     print(f"Trust Calibration: {results['trust_calibration']:.2%}")
     print(f"Detection Confidence: {results['confidence']:.2%}")
     print(f"\nInterpretation:\n{results['interpretation']}")
-```
