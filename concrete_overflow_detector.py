@@ -1,12 +1,14 @@
 """
-CONCRETE OVERFLOW DETECTOR v0.1 (Proof of Concept)
-Detecting concrete processing patterns in AI abstract reasoning
-Based on H. Levinson (2021) - Neural representation of abstract concepts in typical and atypical cognition
+CONCRETE OVERFLOW DETECTION FRAMEWORK v0.1 (Proof of Concept)
+A linguistic analysis framework for evaluating abstract reasoning patterns in text.
 
-This experimental tool identifies when AI systems process abstract concepts through 
-concrete/perceptual pathways - the same pattern found in ASD neural processing.
+Based on neuroscience research (Levinson, 2021) showing how individuals with ASD 
+process abstract concepts through concrete neural pathways.
 
-Status: Experimental implementation for research purposes
+This framework analyzes linguistic patterns that may correlate with these 
+neural differences, but does NOT measure actual neural activity.
+
+Status: Experimental research prototype - not validated for diagnostic use
 """
 
 import numpy as np
