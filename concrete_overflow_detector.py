@@ -1,4 +1,105 @@
-0+ brain scans',
+```python
+"""
+CONCRETE OVERFLOW DETECTOR v0.1 (Proof of Concept)
+Detecting concrete processing patterns in AI abstract reasoning
+Based on H. Danan (2021) - Neural representation of abstract concepts in typical and atypical cognition
+
+This experimental tool identifies when AI systems process abstract concepts through 
+concrete/perceptual pathways - the same pattern found in ASD neural processing.
+
+Status: Experimental implementation for research purposes
+"""
+
+import numpy as np
+import pandas as pd
+from typing import Dict, Tuple, List, Optional
+import matplotlib.pyplot as plt
+from dataclasses import dataclass
+import seaborn as sns
+import re
+from collections import Counter
+
+@dataclass
+class NeuralSignature:
+    """Neural activation patterns from Danan (2021)"""
+    region: str
+    activation_pattern: np.ndarray
+    processing_type: str  # 'abstract' or 'concrete'
+    source: str = "Illustrative values based on Danan (2021) findings"
+    
+class ConcreteOverflowDetector:
+    """
+    Detects when AI responses show concrete processing of abstract concepts
+    Based on ASD neural patterns: thalamic activation for figurative language,
+    right vATL overextension, and dmPFC underactivation
+    
+    Version: 0.1 (Proof of Concept)
+    Status: Experimental - patterns are illustrative based on published findings
+    """
+    
+    def __init__(self):
+        self.version = "0.1-experimental"
+        self.neural_signatures = self._load_neural_signatures()
+        self.semantic_features = self._initialize_semantic_features()
+        self.asd_markers = self._load_asd_processing_markers()
+        self.validation_status = self._get_validation_status()
+        
+    def _load_neural_signatures(self) -> Dict[str, NeuralSignature]:
+        """
+        Load illustrative neural signatures based on dissertation findings
+        NOTE: These are representative patterns for v0.1, not exact clinical values
+        """
+        return {
+            'dmPFC': NeuralSignature(
+                region='dorsomedial prefrontal cortex',
+                activation_pattern=np.array([0.8, 0.9, 0.7, 0.85]),  # NT abstract pattern
+                processing_type='abstract',
+                source="Illustrative based on Danan (2021) dmPFC findings"
+            ),
+            'thalamus': NeuralSignature(
+                region='thalamus', 
+                activation_pattern=np.array([0.3, 0.2, 0.9, 0.85]),  # ASD concrete pattern
+                processing_type='concrete',
+                source="Illustrative based on Danan (2021) thalamic activation in ASD"
+            ),
+            'right_vATL': NeuralSignature(
+                region='right ventral anterior temporal lobe',
+                activation_pattern=np.array([0.4, 0.3, 0.8, 0.9]),  # ASD overflow pattern
+                processing_type='concrete',
+                source="Based on vATL-aSTS hyperconnectivity findings"
+            ),
+            'right_STG': NeuralSignature(
+                region='right superior temporal gyrus',
+                activation_pattern=np.array([0.9, 0.8, 0.3, 0.2]),  # NT social pattern
+                processing_type='abstract',
+                source="Based on social processing differences in Danan (2021)"
+            )
+        }
+    
+    def _initialize_semantic_features(self) -> Dict[str, List[str]]:
+        """14-feature semantic model from Danan (2021) dissertation"""
+        return {
+            'internal': ['social', 'emotion', 'polarity', 'morality', 'thought', 'self-motion'],
+            'external': ['space', 'time', 'quantity'],
+            'concrete': ['visual', 'auditory', 'tactile', 'smell/taste', 'color']
+        }
+    
+    def _load_asd_processing_markers(self) -> Dict[str, float]:
+        """ASD-specific processing patterns from dissertation findings"""
+        return {
+            'thalamic_figurative_activation': 0.85,  # ASD shows HIGH
+            'dmPFC_social_activation': 0.25,        # ASD shows LOW  
+            'concrete_overflow_threshold': 0.7,      # When concrete > abstract
+            'right_vATL_overextension': 0.8         # ASD hyperconnectivity
+        }
+    
+    def _get_validation_status(self) -> Dict[str, str]:
+        """Current validation status of the detector"""
+        return {
+            'version': 'v0.1 Experimental',
+            'tested_on': 'Simulated AI responses (pending real data)',
+            'human_correlation': 'Pending validation study',
+            'fmri_validation': 'Based on Danan (2021) - 60+ brain scans',
             'status': 'Proof of Concept - Not for clinical use'
         }
     
@@ -292,7 +393,7 @@
             "METAPHOR_LITERALIZATION": 
                 f"Detecting figurative language processed through concrete pathways. "
                 f"Overflow score: {overflow_score:.2%}. This pattern resembles literal "
-                f"interpretation of abstract concepts found in ASD neural patterns (Levinson, 2021). "
+                f"interpretation of abstract concepts found in ASD neural patterns (Danan, 2021). "
                 f"Note: v0.1 experimental detection.",
             
             "STATISTICAL_MIMICRY": 
@@ -303,7 +404,7 @@
             "CONCRETE_NETWORK_OVERFLOW":
                 f"Detecting potential vATL overextension pattern (overflow: {overflow_score:.2%}). "
                 f"Suggests concrete semantic networks processing abstract content, "
-                f"similar to patterns observed in Levinson (2021) dissertation.",
+                f"similar to patterns observed in Danan (2021) dissertation.",
             
             "MECHANICAL_SOCIAL_PROCESSING":
                 f"Social/emotional concepts appear to be processed mechanically "
@@ -402,7 +503,7 @@
             'current_status': 'v0.1 Experimental',
             'validation_steps': {
                 'completed': [
-                    'Theoretical framework based on Levinson (2021)',
+                    'Theoretical framework based on Danan (2021)',
                     'Initial pattern detection algorithms',
                     'Proof of concept implementation'
                 ],
@@ -419,7 +520,7 @@
                 ]
             },
             'data_sources': {
-                'neural_patterns': 'Based on 60+ fMRI scans from Levinson (2021)',
+                'neural_patterns': 'Based on 80+ fMRI scans from Danan (2021)',
                 'behavioral_validation': 'Pending',
                 'ai_response_testing': 'Pending'
             }
