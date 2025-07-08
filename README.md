@@ -85,3 +85,28 @@ With proper validation, this framework could enable:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Quick Start
+
+```python
+from concrete_overflow_detector import ConcreteOverflowDetector
+
+detector = ConcreteOverflowDetector()
+result = detector.detect_overflow(text_sample)
+
+# Returns linguistic pattern analysis and theoretical neural mapping
+print(f"Linguistic patterns suggest: {result['overflow_score']:.1%} concrete processing")
+print(f"Pattern type: {result['failure_mode']}")
+```
+
+### Contributing
+This is an open research project. I welcome:
+- Feedback on the framework
+- Real AI responses for testing
+- Collaboration on validation
+- Ideas for improvement
+
+### Citation
+Levinson, H. (2021). The Neural Representation of Abstract Concepts in 
+Typical and Atypical Cognition. Doctoral Dissertation, Rutgers University.
