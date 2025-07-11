@@ -1,5 +1,8 @@
 # Concrete Overflow Detection Framework v0.1
 
+> Part of the [Cognitive Architectures for AI](https://github.com/HillaryDanan/cognitive-architectures-ai) research program
+
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/HillaryDanan/concrete-overflow-detector/blob/main/Concrete_Overflow_Detector_Demo.ipynb)
 
 **A linguistic analysis framework for evaluating AI abstract reasoning patterns**
